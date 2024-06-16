@@ -13,13 +13,14 @@ export default function Sells() {
   return (
     <div>
       <div className=" bg-[#1f1e1e]  rounded-2xl  flex justify-center items-center    gap-5 px-5 py-4">
-        <div className="flex flex-col gap-1 w-full ">
+        <div className="flex flex-col gap-1  ">
           <p className="text-lg tracking-wide text-gray-300 ">Sell</p>
           <input
             type="text"
             value={Sell}
             placeholder="0"
-            className="focus:outline-none text-white w-full placeholder:text-white     font-medium text-4xl py-2 bg-transparent "
+            maxLength="7"
+            className="focus:outline-none text-white w-full  placeholder:text-white     font-medium text-4xl py-2 bg-transparent "
             onChange={(e) => setSell(e.target.value.replace(/\D/g, ""))}
           />
           <p
@@ -29,7 +30,7 @@ export default function Sells() {
           >
             {SellCostLoading
               ? "Loading"
-              : `$ ${Sell * CurrentSell?.current_price}`}
+              : `$${(Sell * CurrentSell?.current_price).toFixed(2)}`}
           </p>
         </div>
         <div>

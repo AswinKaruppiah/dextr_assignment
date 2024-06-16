@@ -22,10 +22,10 @@ export const Swapprovider = ({ children }) => {
     sym: "",
   });
 
-  const [Sell, setSell] = useState();
+  const [Sell, setSell] = useState("");
   const [CurrentBuy, setCurrentBuy] = useState();
   const [CurrentBuycost, setCurrenBuycost] = useState();
-  const [swap, setswap] = useState(null);
+  const [swap, setswap] = useState("");
   const [data, setData] = useState();
   const [TransactionHistroy, setTransactionHistroy] = useState([]);
 

@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
-import { IoExitOutline } from "react-icons/io5";
+
 import { useContext } from "react";
 import { SwapContext } from "../context/SwapState";
 import Loader from "./Loader";
-
+import exit from "../assets/img/svgexport-16.svg";
 export default function Modal({ open, onClose, setSellCostLoading, input }) {
   const {
     CoinList,
@@ -15,6 +15,9 @@ export default function Modal({ open, onClose, setSellCostLoading, input }) {
     CurrentBuy,
     convention,
     data,
+
+    Sell,
+    swap,
   } = useContext(SwapContext);
 
   const { loading, error } = CoinList();
@@ -35,14 +38,20 @@ export default function Modal({ open, onClose, setSellCostLoading, input }) {
           ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}
         `}
       >
-        <button
+        {/* <button
           onClick={onClose}
           className="absolute top-3 right-3 p-1 text-2xl cursor-pointer hover:bg-gray-500 rounded-lg "
         >
           <IoExitOutline />
-        </button>
+        </button> */}
+        <img
+          src={exit}
+          alt="swap"
+          onClick={onClose}
+          className="absolute h-8 transition-colors  object-cover rounded-full top-3 right-3 p-1 text-2xl cursor-pointer hover:bg-gray-500  "
+        />
 
-        <h1 className="text-3xl font-bold">Crypto Currencies</h1>
+        <h1 className="text-3xl font-bold">Select Token</h1>
         {loading ? (
           <div className="flex justify-center items-center w-full h-dvh">
             <Loader h="h-20" />
@@ -113,59 +122,3 @@ export default function Modal({ open, onClose, setSellCostLoading, input }) {
     </div>
   );
 }
-
-{
-  /* <div className="flex gap-4">
-  <button className=" w-full font-bold" onClick={onClose}>
-    Cancel!
-  </button>
-</div>; */
-}
-
-//  {Name && (
-//                 <h1 className="  text-[#322C2B]  text-4xl text-left font-bold">
-//                   {Name.toUpperCase()}
-//                 </h1>
-//               )}
-//               <div
-//                 className={`transition-all w-full ${
-//                   Name ? "translate-y-3" : "translate-y-0"
-//                 }`}
-//               >
-//                 <input
-//                   className="w-full  py-5 px-2 pl-5 rounded-md bg-gray-200  focus:outline-none "
-//                   maxLength="15"
-//                   placeholder="Name"
-//                   onChange={(e) => setName(e.target.value)}
-//                 />
-//                 <div className="flex flex-wrap gap-5 py-5">
-//                   {/* <p>Microphone: {listening ? "on" : "off"}</p> */}
-//                   {listening ? (
-//                     <button
-//                       className=" p-1 rounded-lg text-gray-400 bg-white text-2xl hover:bg-gray-50 hover:text-gray-600"
-//                       onClick={SpeechRecognition.stopListening}
-//                     >
-//                       <AiOutlineAudioMuted />
-//                     </button>
-//                   ) : (
-//                     <button
-//                       className=" p-1 rounded-lg text-gray-400 bg-white text-2xl hover:bg-gray-50 hover:text-gray-600"
-//                       onClick={startListening}
-//                     >
-//                       <AiOutlineAudio />
-//                     </button>
-//                   )}
-
-//                   {transcript && (
-//                     <button
-//                       className=" p-1 rounded-lg text-gray-400 bg-white text-2xl hover:bg-gray-50 hover:text-gray-600"
-//                       onClick={resetTranscript}
-//                     >
-//                       <GrPowerReset />
-//                     </button>
-//                   )}
-//                 </div>
-//                 <p className="text-lg text-gray-500 font-medium tracking-wide text-left">
-//                   {transcript}
-//                   </p>
-//                 </div>
