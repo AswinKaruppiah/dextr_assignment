@@ -34,7 +34,7 @@ export default function Histroy() {
                   )}`}
                 </h3>
                 <h3 className=" text-lg tracking-wide font-medium  text-gray-300 ">
-                  {`ToTal = $ ${(item.sell_cost * item.sell).toFixed(2)}`}
+                  {`Total = $ ${(item.sell_cost * item.sell).toFixed(2)}`}
                 </h3>
               </div>
               <div>
@@ -57,7 +57,7 @@ export default function Histroy() {
                   )}`}
                 </h3>
                 <h3 className=" text-lg tracking-wide font-medium  text-gray-300 ">
-                  {`ToTal = $ ${(item.buy_cost * item.swap * item.sell).toFixed(
+                  {`Total = $ ${(item.buy_cost * item.swap * item.sell).toFixed(
                     2
                   )}`}
                 </h3>

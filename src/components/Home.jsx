@@ -83,7 +83,9 @@ export default function Home() {
             >
               {`1 ${CurrentBuy?.symbol.toUpperCase()} = ${(1 / swap).toFixed(
                 7
-              )}  ($${CurrentBuy?.current_price})`}
+              )} ${CurrentSell?.symbol.toUpperCase()} ($${
+                CurrentBuy?.current_price
+              })`}
             </p>
           )
         ) : null}
