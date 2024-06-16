@@ -51,7 +51,7 @@ export default function Home() {
             }
             setLoading(false);
           }}
-          className="w-full bg-[#FF3FA4]  h-full  bg-opacity-20 hover:bg-opacity-15    rounded-2xl text-xl font-bold py-3 text-[#FF6AC2]"
+          className="w-full bg-[#FF3FA4]  h-full  bg-opacity-20 hover:bg-opacity-15    rounded-2xl text-xl font-bold py-4 text-[#FF6AC2]"
         >
           {Loading ? (
             <div className="flex justify-center  items-center w-full">

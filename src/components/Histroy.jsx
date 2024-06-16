@@ -6,7 +6,7 @@ export default function Histroy() {
 
   return (
     <div className="max-w-7xl m-auto p-3 sm:p-0">
-      <h1 className="text-5xl text-white font-bold">Transaction Histroy</h1>
+      <h1 className="text-4xl text-white font-bold">Transaction Histroy</h1>
       <div className="flex   w-full   justify-start items-center gap-6  py-3 sm:px-4  flex-wrap">
         {TransactionHistroy &&
           TransactionHistroy.map((item, index) => (
@@ -29,12 +29,12 @@ export default function Histroy() {
                   Sell = {item.sell}
                 </p>
                 <h3 className=" text-lg tracking-wide font-medium  text-gray-300 ">
-                  {`1${item.sell_sym.toUpperCase()} = $ ${item.sell_cost.toFixed(
+                  {`1${item.sell_sym.toUpperCase()} = $${item.sell_cost.toFixed(
                     2
                   )}`}
                 </h3>
                 <h3 className=" text-lg tracking-wide font-medium  text-gray-300 ">
-                  {`Total = $ ${(item.sell_cost * item.sell).toFixed(2)}`}
+                  {`Total = $${(item.sell_cost * item.sell).toFixed(2)}`}
                 </h3>
               </div>
               <div>
@@ -52,12 +52,12 @@ export default function Histroy() {
                   Buy = {item.swap}
                 </p>
                 <h3 className=" text-lg tracking-wide font-medium  text-gray-300 ">
-                  {`1${item.buy_sym.toUpperCase()} = $ ${item.buy_cost.toFixed(
+                  {`1${item.buy_sym.toUpperCase()} = $${item.buy_cost.toFixed(
                     2
                   )}`}
                 </h3>
                 <h3 className=" text-lg tracking-wide font-medium  text-gray-300 ">
-                  {`Total = $ ${(item.buy_cost * item.swap * item.sell).toFixed(
+                  {`Total = $${(item.buy_cost * item.swap * item.sell).toFixed(
                     2
                   )}`}
                 </h3>
