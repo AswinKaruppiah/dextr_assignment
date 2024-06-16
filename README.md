@@ -1,7 +1,5 @@
 ## Getting stated
 
-### Try it online on StackBlitz
-
 ### Initialize a demo project locally
 
 1. `npm install`
